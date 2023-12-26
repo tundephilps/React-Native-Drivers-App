@@ -11,6 +11,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import Checkbox from "expo-checkbox";
 import Icon from "react-native-vector-icons/FontAwesome"; // Import the appropriate icon library
 
+import { useNavigation } from "@react-navigation/native";
+
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -28,6 +30,9 @@ const Login = () => {
     console.log("Resetting password for:", email);
     setPassword("");
   };
+
+  const navigation = useNavigation(); // Get the navigation object
+
   return (
     <SafeAreaView>
       <View style={styles.container}>
@@ -162,7 +167,10 @@ const Login = () => {
             </Text>
           </View>
           <View>
-            <TouchableOpacity onPress={handleResetPassword}>
+            <TouchableOpacity
+              onPress={() => navigation.navigate("Recover")}
+              //    onPress={handleResetPassword}
+            >
               <Text style={{ color: "#605BFF", fontWeight: "200" }}>
                 Reset Password
               </Text>
@@ -175,9 +183,7 @@ const Login = () => {
           style={{
             paddingHorizontal: 22,
           }}
-          onPress={() => {
-            /* handle onPress */
-          }}
+          onPress={() => navigation.navigate("PersonalDetails")}
         >
           <View
             style={{
@@ -202,10 +208,14 @@ const Login = () => {
           </View>
         </TouchableOpacity>
         <View style={{ height: 30 }} />
-        <Text style={{ alignSelf: "center", fontWeight: "200", fontSize: 16 }}>
-          Dont have account yet?{" "}
-          <Text style={{ color: "#605BFF" }}>New account</Text>{" "}
-        </Text>
+        <TouchableOpacity onPress={() => navigation.navigate("SignUp")}>
+          <Text
+            style={{ alignSelf: "center", fontWeight: "200", fontSize: 16 }}
+          >
+            Dont have account yet?{" "}
+            <Text style={{ color: "#605BFF", fontWeight: "300" }}>Sign Up</Text>
+          </Text>
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );

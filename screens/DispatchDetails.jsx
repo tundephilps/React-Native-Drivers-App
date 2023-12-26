@@ -1,0 +1,349 @@
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
+import React, { useState } from "react";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { Ionicons } from "@expo/vector-icons";
+
+import { EvilIcons } from "@expo/vector-icons";
+import { SimpleLineIcons } from "@expo/vector-icons";
+import { FontAwesome } from "@expo/vector-icons";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { AntDesign } from "@expo/vector-icons";
+import { MaterialIcons } from "@expo/vector-icons";
+
+import { useNavigation } from "@react-navigation/native";
+import { StatusBar } from "expo-status-bar";
+
+const DispatchDetails = () => {
+  return (
+    <SafeAreaView style={{ backgroundColor: "white", height: "100%" }}>
+      <StatusBar style="auto" backgroundColor="#b847ef" />
+      <View style={styles.status}>
+        {/* Header */}
+        <View
+          style={{
+            padding: 16,
+            alignItems: "center",
+            flexDirection: "row",
+            justifyContent: "space-between",
+          }}
+        >
+          <TouchableOpacity
+            style={{
+              height: 35,
+              width: 35,
+              borderRadius: 50,
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Ionicons name="arrow-back-outline" size={18} color="white" />
+          </TouchableOpacity>
+          <Text style={{ fontWeight: "800", fontSize: 18, color: "white" }}>
+            Dispatch Details
+          </Text>
+          <TouchableOpacity
+            style={{
+              height: 35,
+              width: 35,
+              backgroundColor: "#f8f8f8",
+              borderRadius: 50,
+              justifyContent: "center",
+              alignItems: "center",
+              opacity: 0,
+            }}
+          >
+            <Ionicons name="arrow-back-outline" size={18} color="black" />
+          </TouchableOpacity>
+        </View>
+        <View
+          style={{
+            paddingVertical: 5,
+            backgroundColor: "white",
+            width: 80,
+            alignItems: "center",
+            justifyContent: "center",
+            alignSelf: "center",
+
+            borderRadius: 10,
+          }}
+        >
+          <Text style={{ fontWeight: "200" }}>Online</Text>
+        </View>
+      </View>
+      <View style={{ paddingVertical: 32, paddingHorizontal: 16 }}>
+        <Text
+          style={{
+            fontSize: 18,
+            fontWeight: "600",
+            color: "#111",
+          }}
+        >
+          Customer Details
+        </Text>
+        <View style={{ height: 12 }} />
+        {/* Details */}
+        <View
+          style={{
+            alignItems: "center",
+            justifyContent: "space-between",
+            flexDirection: "row",
+          }}
+        >
+          <View
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              gap: 12,
+            }}
+          >
+            <View
+              style={{
+                padding: 8,
+                backgroundColor: "#e8e8e8",
+                borderRadius: 6,
+              }}
+            >
+              <SimpleLineIcons name="user" size={24} color="#B847EF" />
+            </View>
+
+            <Text style={{ fontWeight: "600", color: "#868686" }}>Name:</Text>
+          </View>
+          <View>
+            <Text style={{ fontWeight: "300", color: "#868686" }}>
+              {" "}
+              James Tarver
+            </Text>
+          </View>
+        </View>
+        <View style={{ height: 12 }} />
+        <View
+          style={{
+            alignItems: "center",
+            justifyContent: "space-between",
+            flexDirection: "row",
+          }}
+        >
+          <View
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              gap: 12,
+            }}
+          >
+            <View
+              style={{
+                padding: 8,
+                backgroundColor: "#e8e8e8",
+                borderRadius: 6,
+              }}
+            >
+              <Ionicons name="location" size={24} color="#B847EF" />
+            </View>
+
+            <Text style={{ fontWeight: "600", color: "#868686" }}>
+              Address:
+            </Text>
+          </View>
+          <View
+            style={{
+              justifyContent: "flex-end",
+              alignItems: "flex-end",
+              width: "70%",
+            }}
+          >
+            <Text
+              style={{
+                fontWeight: "300",
+                color: "#868686",
+                fontSize: 12,
+                textAlign: "right",
+              }}
+            >
+              Kilometer 55, Lekki-Epe Expressway Sangotedo, Ibeju-Lekki.
+            </Text>
+          </View>
+        </View>
+        <View
+          style={{
+            borderTopWidth: 1,
+            borderTopColor: "lightgray",
+            marginVertical: 20,
+          }}
+        />
+        <Text
+          style={{
+            fontSize: 18,
+            fontWeight: "600",
+            color: "#111",
+          }}
+        >
+          Order Details
+        </Text>
+        <View style={{ height: 12 }} />
+        <View
+          style={{
+            alignItems: "center",
+            justifyContent: "space-between",
+            flexDirection: "row",
+          }}
+        >
+          <View
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              gap: 12,
+            }}
+          >
+            <View
+              style={{
+                padding: 8,
+                backgroundColor: "#e8e8e8",
+                borderRadius: 6,
+              }}
+            >
+              <SimpleLineIcons name="user" size={24} color="#B847EF" />
+            </View>
+
+            <Text style={{ fontWeight: "600", color: "#868686" }}>
+              Order ID:
+            </Text>
+          </View>
+          <View>
+            <Text style={{ fontWeight: "300", color: "#868686" }}>
+              {" "}
+              James Tarver
+            </Text>
+          </View>
+        </View>
+        <View style={{ height: 12 }} />
+        <View
+          style={{
+            alignItems: "center",
+            justifyContent: "space-between",
+            flexDirection: "row",
+          }}
+        >
+          <View
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              gap: 12,
+            }}
+          >
+            <View
+              style={{
+                padding: 8,
+                backgroundColor: "#e8e8e8",
+                borderRadius: 6,
+              }}
+            >
+              <Ionicons name="time-outline" size={24} color="#B847EF" />
+            </View>
+
+            <Text style={{ fontWeight: "600", color: "#868686" }}>
+              Pick Up Time:
+            </Text>
+          </View>
+          <View>
+            <Text style={{ fontWeight: "300", color: "#868686" }}>12:00PM</Text>
+          </View>
+        </View>
+        <View style={{ height: 12 }} />
+        <View
+          style={{
+            alignItems: "center",
+            justifyContent: "space-between",
+            flexDirection: "row",
+          }}
+        >
+          <View
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              gap: 12,
+            }}
+          >
+            <View
+              style={{
+                padding: 8,
+                backgroundColor: "#e8e8e8",
+                borderRadius: 6,
+              }}
+            >
+              <Ionicons name="ios-card-outline" size={24} color="#B847EF" />
+            </View>
+
+            <Text style={{ fontWeight: "600", color: "#868686" }}>
+              Payment Method:
+            </Text>
+          </View>
+          <View>
+            <Text style={{ fontWeight: "300", color: "#868686" }}>Cash</Text>
+          </View>
+        </View>
+        <View style={{ height: 12 }} />
+        <View
+          style={{
+            alignItems: "center",
+            justifyContent: "space-between",
+            flexDirection: "row",
+          }}
+        >
+          <View
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              gap: 12,
+            }}
+          >
+            <View
+              style={{
+                padding: 8,
+                backgroundColor: "#e8e8e8",
+                borderRadius: 6,
+              }}
+            >
+              <Ionicons name="cart-outline" size={24} color="#B847EF" />
+            </View>
+
+            <Text style={{ fontWeight: "600", color: "#868686" }}>
+              Item(s) Ordered:
+            </Text>
+          </View>
+          <View>
+            <Text style={{ fontWeight: "300", color: "#868686" }}>
+              Iphone 14 Pro Max
+            </Text>
+          </View>
+        </View>
+        <View style={{ height: 12 }} />
+      </View>
+    </SafeAreaView>
+  );
+};
+
+export default DispatchDetails;
+
+const styles = StyleSheet.create({
+  status: {
+    borderBottomRightRadius: 40,
+    borderBottomLeftRadius: 40,
+    backgroundColor: "#b847ef",
+    height: 130,
+    overflow: "hidden",
+    width: "100%",
+  },
+});

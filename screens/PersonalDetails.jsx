@@ -15,7 +15,10 @@ import { FontAwesome } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
+
 import { SimpleLineIcons } from "@expo/vector-icons";
+
+import { useNavigation } from "@react-navigation/native";
 
 const PersonalDetails = () => {
   const [firstName, setFirstName] = useState("");
@@ -27,8 +30,13 @@ const PersonalDetails = () => {
   const [nextOfKinPhoneNumber, setNextOfKinPhoneNumber] = useState("");
   const [progress, setProgress] = useState(0);
 
+  const navigation = useNavigation(); // Get the navigation object
+
   const handleContinue = () => {
     // Validate input fields and update progress
+
+    navigation.navigate("TransportDetails");
+
     if (
       firstName &&
       lastName &&
@@ -38,7 +46,7 @@ const PersonalDetails = () => {
       nextOfKinPhoneNumber
     ) {
       setProgress(0.5);
-      navigation.navigate("VehicleInfo");
+      // navigation.navigate("VehicleInfo");
     }
   };
 

@@ -1,0 +1,34 @@
+import React, { useState, useEffect } from 'react';
+import { Button, View, Permissions } from 'react-native';
+
+const App = () => {
+ const [hasCameraPermission, setHasCameraPermission] = useState(null);
+ const [requested, setRequested] = useState(false);
+
+ useEffect(() => {
+    if (requested) {
+      (async () => {
+        try {
+          const granted = await Permissions.askAsync(Permissions.CAMERA);
+          setHasCameraPermission(granted);
+        } catch (error) {
+          console.error('Error asking for camera access:', error);
+        }
+      })();
+    }
+ }, [requested]);
+
+ return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Button
+        title="Request Camera Access"
+        onPress={() => setRequested(true)}
+      />
+      {requested && (
+        <Text>Camera access: {hasCameraPermission ? 'granted' : 'denied'}</Text>
+      )}
+    </View>
+ );
+};
+
+export default App;

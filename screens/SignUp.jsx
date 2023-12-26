@@ -11,6 +11,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import Checkbox from "expo-checkbox";
 import Icon from "react-native-vector-icons/FontAwesome"; // Import the appropriate icon library
 
+import { useNavigation } from "@react-navigation/native";
+
 const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -31,6 +33,8 @@ const SignUp = () => {
     console.log("Resetting password for:", email);
     setPassword("");
   };
+
+  const navigation = useNavigation(); // Get the navigation object
 
   return (
     <SafeAreaView>
@@ -247,10 +251,15 @@ const SignUp = () => {
           </View>
         </TouchableOpacity>
         <View style={{ height: 10 }} />
-        <Text style={{ alignSelf: "center", fontWeight: "200", fontSize: 16 }}>
-          Already have an account?
-          <Text style={{ color: "#605BFF" }}> Log in</Text>{" "}
-        </Text>
+
+        <TouchableOpacity onPress={() => navigation.navigate("Login")}>
+          <Text
+            style={{ alignSelf: "center", fontWeight: "200", fontSize: 16 }}
+          >
+            Already have an account?
+            <Text style={{ color: "#605BFF" }}> Log in</Text>{" "}
+          </Text>
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );

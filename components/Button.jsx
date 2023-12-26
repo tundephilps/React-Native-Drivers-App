@@ -1,11 +1,38 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import React from "react";
 
 const Button = () => {
   return (
-    <View>
-      <Text>Button</Text>
-    </View>
+    <TouchableOpacity
+      style={{
+        paddingHorizontal: 22,
+      }}
+      onPress={() => {
+        /* handle onPress */
+      }}
+    >
+      <View
+        style={{
+          backgroundColor: "#B847EF", // Background color
+          marginTop: 6, // Margin top
+          height: 50,
+          paddingHorizontal: 18,
+          borderRadius: 8,
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Text
+          style={{
+            fontSize: 16, // Font size
+            fontWeight: "normal", // Font weight
+            color: "#fff", // Text color
+          }}
+        >
+          Log in
+        </Text>
+      </View>
+    </TouchableOpacity>
   );
 };
 
