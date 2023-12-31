@@ -13,10 +13,13 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { AntDesign } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
 
+import { useNavigation } from "@react-navigation/native";
 import Checkbox from "expo-checkbox";
 
 const Agree = () => {
   const [agree, setAgree] = useState(false);
+
+  const navigation = useNavigation(); // Get the navigation object
   return (
     <SafeAreaView>
       {/* Header */}
@@ -97,13 +100,11 @@ const Agree = () => {
 
         <TouchableOpacity
           style={{}}
-          onPress={() => {
-            /* handle onPress */
-          }}
+          onPress={() => navigation.navigate("Main")}
         >
           <View
             style={{
-              backgroundColor: "#B847EF", // Background color
+              backgroundColor: "#A10F7E", // Background color
               marginTop: 6, // Margin top
               height: 50,
               paddingHorizontal: 18,

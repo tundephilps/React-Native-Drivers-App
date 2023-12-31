@@ -17,7 +17,7 @@ import { MaterialIcons } from "@expo/vector-icons";
 
 import { useNavigation } from "@react-navigation/native";
 
-export default function Photoshoot() {
+export default function PackageCamera() {
   const [type, setType] = useState(CameraType.back);
   const [permission, requestPermission] = Camera.useCameraPermissions();
   const [isSnapping, setSnapping] = useState(false);
@@ -80,7 +80,7 @@ export default function Photoshoot() {
 
     // Close the modal after saving
 
-    navigation.navigate("Agree");
+    navigation.navigate("PackagePickedConfirmation");
     closeModal();
   }
 
@@ -88,45 +88,8 @@ export default function Photoshoot() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View
-        style={{
-          padding: 16,
-          alignItems: "center",
-          flexDirection: "row",
-          justifyContent: "space-between",
-        }}
-      >
-        <TouchableOpacity
-          style={{
-            height: 35,
-            width: 35,
-            backgroundColor: "#f8f8f8",
-            borderRadius: 50,
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <Ionicons name="arrow-back-outline" size={18} color="black" />
-        </TouchableOpacity>
-        <Text style={{ fontWeight: "800", fontSize: 18 }}>
-          Facial Recognition
-        </Text>
-        <TouchableOpacity
-          style={{
-            height: 35,
-            width: 35,
-            backgroundColor: "#f8f8f8",
-            borderRadius: 50,
-            justifyContent: "center",
-            alignItems: "center",
-            opacity: 0,
-          }}
-        >
-          <Ionicons name="arrow-back-outline" size={18} color="black" />
-        </TouchableOpacity>
-      </View>
-
-      <Text style={styles.logIn}>Verify Identity</Text>
+      <View style={{ padding: 32 }} />
+      <Text style={styles.logIn}>Verify Package</Text>
       <Text
         style={{
           fontSize: 16,
@@ -136,7 +99,8 @@ export default function Photoshoot() {
           alignSelf: "center",
         }}
       >
-        Position your bare face clearly in the camera No face mask or glasses
+        *Please inspect package carefully as when uploaded, you will be fully
+        responsible for any damage or loss.
       </Text>
 
       <View style={styles.cameraContainer}>
@@ -170,7 +134,7 @@ export default function Photoshoot() {
               style={styles.modalButton}
               onPress={saveImageToBackend}
             >
-              <Text style={styles.modalButtonText}>Save</Text>
+              <Text style={styles.modalButtonText}>Upload</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.modalButton} onPress={closeModal}>
               <Text style={styles.modalButtonText}>Close</Text>
@@ -190,7 +154,7 @@ const styles = StyleSheet.create({
   cameraContainer: {
     height: 310,
     width: 310,
-    borderRadius: 300,
+    borderRadius: 8,
     overflow: "hidden",
     margin: 16,
     alignSelf: "center",

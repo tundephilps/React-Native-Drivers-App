@@ -22,7 +22,7 @@ const Call = () => {
       <View
         style={{
           borderRadius: 20,
-          backgroundColor: "#b847ef",
+          backgroundColor: "#A10F7E",
           width: "100%",
           height: 182,
           justifyContent: "center",

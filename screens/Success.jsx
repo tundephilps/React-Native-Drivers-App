@@ -14,7 +14,7 @@ const Success = () => {
       <Ionicons
         name="checkmark-circle-sharp"
         size={120}
-        color="#B847EF"
+        color="#A10F7E"
         style={{ alignSelf: "center" }}
       />
       <Text

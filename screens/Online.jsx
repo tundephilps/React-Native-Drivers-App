@@ -9,16 +9,12 @@ import {
   ScrollView,
 } from "react-native";
 import BottomSheet from "react-native-raw-bottom-sheet";
+import { Entypo } from "@expo/vector-icons";
 
 import MapView, { Marker } from "react-native-maps";
-import CardOrder from "../components/CardOrder";
 
-const PendinOrder = () => {
+const Online = () => {
   const bottomSheetRef = useRef(null);
-  useEffect(() => {
-    // Open the bottom sheet when the screen is entered
-    bottomSheetRef.current.open();
-  }, []);
 
   const [userLocation, setUserLocation] = useState(null);
   const [destinationLocation, setDestinationLocation] = useState({
@@ -58,7 +54,6 @@ const PendinOrder = () => {
           }}
         >
           <TouchableOpacity
-            onPress={() => bottomSheetRef.current.open()}
             style={{
               height: 35,
               width: 35,
@@ -72,10 +67,10 @@ const PendinOrder = () => {
           </TouchableOpacity>
           <TouchableOpacity
             style={{ backgroundColor: "#E6CEF2", borderRadius: 50, padding: 8 }}
-            onPress={() => bottomSheetRef.current.open()}
+            //  onPress={() => bottomSheetRef.current.open()}
           >
             <Text style={{ fontWeight: "800", fontSize: 14 }}>
-              Pending Orders
+              Dispatch Orders
             </Text>
           </TouchableOpacity>
           <TouchableOpacity
@@ -132,32 +127,65 @@ const PendinOrder = () => {
 
           {/* Bottom Sheet */}
 
-          <BottomSheet
-            ref={bottomSheetRef}
-            isOpen // Set isOpen to true to open the BottomSheet by default
-            closeOnDragDown
-            //     dragFromTopOnly
-            containerStyle={styles.bottomSheetContainer}
-            height={600}
-          >
-            <ScrollView style={styles.bottomSheetScrollView}>
+          <View>
+            <View
+              style={{
+                backgroundColor: "#25D366B2",
+                padding: 12,
+                flexDirection: "row",
+                justifyContent: "space-between",
+              }}
+            >
               <View>
-                <View style={{ padding: 0 }}>
-                  <CardOrder />
-                  <CardOrder />
-                  <CardOrder />
-                </View>
+                <Text
+                  style={{
+                    fontWeight: "500",
+
+                    color: "#000",
+                  }}
+                >
+                  You are currently
+                  <Text style={{ color: "#B2FF65", fontWeight: "600" }}>
+                    {" "}
+                    ONLINE
+                  </Text>
+                </Text>
+                <Text style={{ color: "#3F3535", fontWeight: "200" }}>
+                  Receiving Dispatch Requests
+                </Text>
               </View>
-              <View style={{ padding: 32 }} />
-            </ScrollView>
-          </BottomSheet>
+              <View
+                style={{
+                  backgroundColor: "#A10F7ECC",
+                  padding: 12,
+                  borderRadius: 55,
+                }}
+              >
+                <Text style={{ fontWeight: "500", color: "white" }}>
+                  GO OFFLINE
+                </Text>
+              </View>
+            </View>
+            <View
+              style={{
+                backgroundColor: "white",
+                padding: 12,
+                alignItems: "center",
+              }}
+            >
+              <Text style={{ fontWeight: "200" }}>
+                <Entypo name="location" size={24} color="#A10F7E" /> Rider’s
+                Location: 25, Ogeretedo Street, Dopemu, Agege{" "}
+              </Text>
+            </View>
+          </View>
         </View>
       </View>
     </SafeAreaView>
   );
 };
 
-export default PendinOrder;
+export default Online;
 
 const styles = StyleSheet.create({
   container: {

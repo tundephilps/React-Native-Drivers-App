@@ -114,10 +114,10 @@ const DispatchDetails = () => {
               <SimpleLineIcons name="user" size={24} color="#A10F7E" />
             </View>
 
-            <Text style={{ fontWeight: "600", color: "#ffffff" }}>Name:</Text>
+            <Text style={{ fontWeight: "600", color: "#868686" }}>Name:</Text>
           </View>
           <View>
-            <Text style={{ fontWeight: "300", color: "#ffffff" }}>
+            <Text style={{ fontWeight: "300", color: "#868686" }}>
               {" "}
               James Tarver
             </Text>
@@ -149,7 +149,7 @@ const DispatchDetails = () => {
               <Ionicons name="location" size={24} color="#A10F7E" />
             </View>
 
-            <Text style={{ fontWeight: "600", color: "#ffffff" }}>
+            <Text style={{ fontWeight: "600", color: "#868686" }}>
               Address:
             </Text>
           </View>
@@ -163,7 +163,7 @@ const DispatchDetails = () => {
             <Text
               style={{
                 fontWeight: "300",
-                color: "#ffffff",
+                color: "#868686",
                 fontSize: 12,
                 textAlign: "right",
               }}
@@ -214,12 +214,12 @@ const DispatchDetails = () => {
               <SimpleLineIcons name="user" size={24} color="#A10F7E" />
             </View>
 
-            <Text style={{ fontWeight: "600", color: "#ffffff" }}>
+            <Text style={{ fontWeight: "600", color: "#868686" }}>
               Order ID:
             </Text>
           </View>
           <View>
-            <Text style={{ fontWeight: "300", color: "#ffffff" }}>
+            <Text style={{ fontWeight: "300", color: "#868686" }}>
               {" "}
               James Tarver
             </Text>
@@ -251,12 +251,12 @@ const DispatchDetails = () => {
               <Ionicons name="time-outline" size={24} color="#A10F7E" />
             </View>
 
-            <Text style={{ fontWeight: "600", color: "#ffffff" }}>
+            <Text style={{ fontWeight: "600", color: "#868686" }}>
               Pick Up Time:
             </Text>
           </View>
           <View>
-            <Text style={{ fontWeight: "300", color: "#ffffff" }}>12:00PM</Text>
+            <Text style={{ fontWeight: "300", color: "#868686" }}>12:00PM</Text>
           </View>
         </View>
         <View style={{ height: 12 }} />
@@ -285,12 +285,12 @@ const DispatchDetails = () => {
               <Ionicons name="ios-card-outline" size={24} color="#A10F7E" />
             </View>
 
-            <Text style={{ fontWeight: "600", color: "#ffffff" }}>
+            <Text style={{ fontWeight: "600", color: "#868686" }}>
               Payment Method:
             </Text>
           </View>
           <View>
-            <Text style={{ fontWeight: "300", color: "#ffffff" }}>Cash</Text>
+            <Text style={{ fontWeight: "300", color: "#868686" }}>Cash</Text>
           </View>
         </View>
         <View style={{ height: 12 }} />
@@ -319,12 +319,12 @@ const DispatchDetails = () => {
               <Ionicons name="cart-outline" size={24} color="#A10F7E" />
             </View>
 
-            <Text style={{ fontWeight: "600", color: "#ffffff" }}>
+            <Text style={{ fontWeight: "600", color: "#868686" }}>
               Item(s) Ordered:
             </Text>
           </View>
           <View>
-            <Text style={{ fontWeight: "300", color: "#ffffff" }}>
+            <Text style={{ fontWeight: "300", color: "#868686" }}>
               Iphone 14 Pro Max
             </Text>
           </View>

@@ -214,8 +214,8 @@ const SignUp = () => {
           </View>
           <Text style={{ fontWeight: "200", color: "#030229" }}>
             By creating an account you agree to the
-            <Text style={{ color: "#B847EF" }}> terms of use</Text> and our{" "}
-            <Text style={{ color: "#B847EF" }}>privacy policy.</Text>
+            <Text style={{ color: "#A10F7E" }}> terms of use</Text> and our{" "}
+            <Text style={{ color: "#A10F7E" }}>privacy policy.</Text>
           </Text>
         </View>
 
@@ -230,7 +230,7 @@ const SignUp = () => {
         >
           <View
             style={{
-              backgroundColor: "#B847EF", // Background color
+              backgroundColor: "#A10F7E", // Background color
               marginTop: 6, // Margin top
               height: 50,
               paddingHorizontal: 18,

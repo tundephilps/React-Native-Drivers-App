@@ -311,7 +311,7 @@ const TransportDetails = () => {
         >
           <View
             style={{
-              backgroundColor: "#B847EF", // Background color
+              backgroundColor: "#A10F7E", // Background color
               marginTop: 6, // Margin top
               height: 50,
               paddingHorizontal: 18,

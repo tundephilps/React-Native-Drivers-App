@@ -75,7 +75,7 @@ const Recover = () => {
         >
           <View
             style={{
-              backgroundColor: "#B847EF", // Background color
+              backgroundColor: "#A10F7E", // Background color
               height: 50,
               borderRadius: 8,
               alignItems: "center",

@@ -46,7 +46,7 @@ const Profile = () => {
 
   return (
     <SafeAreaView>
-      <StatusBar style="auto" backgroundColor="#b847ef" />
+      <StatusBar style="auto" backgroundColor="#A10F7E" />
       <View style={styles.status}>
         {/* Header */}
         <View
@@ -258,7 +258,7 @@ const Profile = () => {
           onPress={() => handlePress("profile")}
         >
           <View style={styles.box}>
-            <SimpleLineIcons name="user" size={24} color="#B847EF" />
+            <SimpleLineIcons name="user" size={24} color="#A10F7E" />
           </View>
           <View>
             <Text style={styles.text}>Profile info</Text>
@@ -277,7 +277,7 @@ const Profile = () => {
           onPress={() => handlePress("withdrawals")}
         >
           <View style={styles.box}>
-            <AntDesign name="creditcard" size={24} color="#B847EF" />
+            <AntDesign name="creditcard" size={24} color="#A10F7E" />
           </View>
           <View>
             <Text style={styles.text}>Withdrawals</Text>
@@ -296,7 +296,7 @@ const Profile = () => {
           onPress={() => handlePress("settings")}
         >
           <View style={styles.box}>
-            <Ionicons name="settings-outline" size={24} color="#B847EF" />
+            <Ionicons name="settings-outline" size={24} color="#A10F7E" />
           </View>
           <View>
             <Text style={styles.text}>Settings</Text>
@@ -315,7 +315,7 @@ const Profile = () => {
           onPress={() => handlePress("vehicles")}
         >
           <View style={styles.box}>
-            <AntDesign name="car" size={24} color="#B847EF" />
+            <AntDesign name="car" size={24} color="#A10F7E" />
           </View>
           <View>
             <Text style={styles.text}>Vehicles</Text>
@@ -339,8 +339,8 @@ const Profile = () => {
               alignItems: "center",
             }}
           >
-            <MaterialIcons name="logout" size={24} color="#B847EF" />
-            <Text style={{ color: "#B847EF", fontSize: 20, fontWeight: "500" }}>
+            <MaterialIcons name="logout" size={24} color="#A10F7E" />
+            <Text style={{ color: "#A10F7E", fontSize: 20, fontWeight: "500" }}>
               Logout
             </Text>
           </View>
@@ -377,7 +377,7 @@ const styles = StyleSheet.create({
   status: {
     borderBottomRightRadius: 40,
     borderBottomLeftRadius: 40,
-    backgroundColor: "#b847ef",
+    backgroundColor: "#A10F7E",
     height: 300,
     overflow: "hidden",
     width: "100%",

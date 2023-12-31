@@ -3,7 +3,10 @@ import React from "react";
 import { FontAwesome } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
 
+import { useNavigation } from "@react-navigation/native";
 const CardOrder = () => {
+  const navigation = useNavigation(); // Get the navigation object
+
   return (
     <TouchableOpacity
       onPress={() => {
@@ -42,9 +45,7 @@ const CardOrder = () => {
             </Text>
           </View>
           <TouchableOpacity
-            onPress={() => {
-              // handle onPress
-            }}
+            onPress={() => navigation.navigate("Picked")}
             style={{ alignSelf: "flex-end" }}
           >
             <View style={styles.btn}>
@@ -81,7 +82,7 @@ const styles = StyleSheet.create({
   cardTitle: {
     fontSize: 20,
     fontWeight: "700",
-    color: "#B847EF",
+    color: "#A10F7E",
     marginRight: 8,
   },
   cardAirport: {

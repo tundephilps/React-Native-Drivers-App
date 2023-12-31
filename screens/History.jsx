@@ -19,7 +19,7 @@ import { StatusBar } from "expo-status-bar";
 const History = () => {
   return (
     <SafeAreaView style={{ backgroundColor: "white", height: "100%" }}>
-      <StatusBar style="auto" backgroundColor="#b847ef" />
+      <StatusBar style="auto" backgroundColor="#A10F7E" />
       <View style={styles.status}>
         {/* Header */}
         <View
@@ -90,7 +90,7 @@ const History = () => {
               }}
             >
               <View style={{ flexDirection: "column", alignItems: "center" }}>
-                <Octicons name="dot" size={28} color="#B847EF" />
+                <Octicons name="dot" size={28} color="#A10F7E" />
                 <View style={{ display: "flex", gap: 3 }}>
                   <View style={styles.dash} />
                   <View style={styles.dash} />
@@ -117,7 +117,7 @@ const History = () => {
                   style={{
                     height: 32,
                     width: 90,
-                    backgroundColor: "#B847EF",
+                    backgroundColor: "#A10F7E",
                     alignItems: "center",
                     justifyContent: "center",
                     borderRadius: 15,
@@ -163,7 +163,7 @@ const History = () => {
               }}
             >
               <View style={{ flexDirection: "column", alignItems: "center" }}>
-                <Octicons name="dot" size={28} color="#B847EF" />
+                <Octicons name="dot" size={28} color="#A10F7E" />
                 <View style={{ display: "flex", gap: 3 }}>
                   <View style={styles.dash} />
                   <View style={styles.dash} />
@@ -190,7 +190,7 @@ const History = () => {
                   style={{
                     height: 32,
                     width: 90,
-                    backgroundColor: "#B847EF",
+                    backgroundColor: "#A10F7E",
                     alignItems: "center",
                     justifyContent: "center",
                     borderRadius: 15,
@@ -237,7 +237,7 @@ const History = () => {
               }}
             >
               <View style={{ flexDirection: "column", alignItems: "center" }}>
-                <Octicons name="dot" size={28} color="#B847EF" />
+                <Octicons name="dot" size={28} color="#A10F7E" />
                 <View style={{ display: "flex", gap: 3 }}>
                   <View style={styles.dash} />
                   <View style={styles.dash} />
@@ -264,7 +264,7 @@ const History = () => {
                   style={{
                     height: 32,
                     width: 90,
-                    backgroundColor: "#B847EF",
+                    backgroundColor: "#A10F7E",
                     alignItems: "center",
                     justifyContent: "center",
                     borderRadius: 15,
@@ -328,7 +328,7 @@ const styles = StyleSheet.create({
   },
   paidParent: {
     borderRadius: 28,
-    backgroundColor: "#b847ef",
+    backgroundColor: "#A10F7E",
     width: 120,
     height: 38,
     alignItems: "center",
@@ -338,7 +338,7 @@ const styles = StyleSheet.create({
   status: {
     borderBottomRightRadius: 40,
     borderBottomLeftRadius: 40,
-    backgroundColor: "#b847ef",
+    backgroundColor: "#A10F7E",
     height: 130,
     overflow: "hidden",
     width: "100%",

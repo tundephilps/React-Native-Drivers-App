@@ -193,7 +193,7 @@ export default Identity;
 
 const styles = StyleSheet.create({
   cameraicons: {
-    backgroundColor: "#B847EF",
+    backgroundColor: "#A10F7E",
     padding: 18,
     borderRadius: 8,
   },
